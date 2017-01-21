@@ -1,0 +1,41 @@
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<!-- :[Scripts]: -->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="assets/js/jquery.md5.min.js" type="text/javascript" ></script>
+	<script src="assets/js/envia_ajax.js" type="text/javascript" charset="UTF-8"></script>
+	<script src="assets/js/cria-form.js" type="text/javascript" charset="UTF-8"></script>
+
+
+
+	
+	<!-- :[Styles]: -->
+	<link rel="stylesheet" text="text/css" href="assets\css\bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style-plugin.css">
+
+
+	<title>Desafio CodeBy</title>
+</head>
+<body>
+	<div class="container">
+		<a href="#openModal" class="openModal">Clique aqui para abrir o cadastro.</a>
+			<div id="openModal" class="modalform">
+				<a href="#close" title="Close" class="closeModal">X</a>
+				<div id="plugin-form" class="col-md-12">	
+				</div>
+				<div id="prateleira"></div>
+			</div>
+	</div>
+	<script>
+		$(function(){
+			$('#plugin-form','#openModal').cria_form({
+				uf:true,
+				nivel:true
+			});
+		});
+	</script>
+</body>
+</html>

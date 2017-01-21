@@ -1,0 +1,36 @@
+h2{
+	text-align: center;
+}
+#nome, #email{
+	width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+#nome, #email, #estado, #nivel, #enviar_contato{
+	border-radius: 0.3em;
+	font-size: 14px;
+	font-weight: normal;
+}
+.nomeForm, .emailForm,.estadoForm, .nivelForm{
+	font-size: 15px;
+	font-weight: bold;
+}
+#enviar_contato{
+	color: #fff;
+	background-color: #49c53b;
+	border-color: #38ab2c;
+}
+.buttonForm{
+	margin-top: 15px;
+}
+#formContato input #enviar_contato{
+	margin-top: 10px;
+	text-align: center;
+}
+.estadoForm,.nivelForm {
+    text-align: center;
+  	margin-top: 10px;
+}
+.buttonForm {
+    text-align: center;
+}
