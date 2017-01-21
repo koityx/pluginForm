@@ -55,24 +55,3 @@
 	background: #c13e2b; 
 	color: #fff;
 }
-.box{
-	position: absolute;
-	left: 0;
-	right: 0;
-	margin: 20px auto;
-	width: 100%;
-	max-width: 250px; 
-	height: 30px;
-	line-height: 28px;
-	border: 1px solid #000;
-}
-body a.openModal{
-	text-align: center !important;
-	text-decoration: none !important;
-
-}
-body.container a.openModal:hover{
-	text-align: center;
-	text-decoration: none;
-
-}

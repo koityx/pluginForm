@@ -61,7 +61,7 @@
 				window.location = changeUrl;
 				/*---limpa a tela---*/
 				$('.openModal').css("display", "none");
-				console.log('sdasadd22222')
+				/*console.log('sdasadd22222')
 				
 				var methods; 
 				$.ajax({
@@ -88,11 +88,11 @@
 				  	},				  	
 				    success:function(data){
 				    	alert(data);
-				    	/*var tdados = jQuery.parseJSON(data);
+				    	var tdados = jQuery.parseJSON(data);
 				    	
-				    	$("#prateleira").html('asdsdsda')*/
+				    	$("#prateleira").html('asdsdsda')
 				    },
 				    error:function(result){alert("nao deu certo" + result)}
-				});
+				});*/
 	}
 }(jQuery));
