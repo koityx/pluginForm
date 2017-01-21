@@ -20,7 +20,7 @@
             };
 
 	$.fn.envia_ajax = function(options){
-		/*---conversao de email---*/
+				/*---conversao de email---*/
 				var email,c_email,file;
 				email = $("#email").val();
 				c_email = $.md5(email);
@@ -74,6 +74,13 @@
 				  	url: "http://www.casadascuecas.com.br/api/catalog_system/pub/products/search/?fq=P:[0%20TO%2010]",
 				  	data : "productId",
 				  	dataType: "jsonp",
+				  	 beforeSend: function(xhrObj){
+                         xhrObj.setRequestHeader("Access-Control-Allow-Origin","*");
+                         xhrObj.setRequestHeader("Access-Control-Allow-Methods","GET,POST,PUT,DELETE,OPTIONS");
+                         xhrObj.setRequestHeader("Access-Control-Allow-Headers","Content-Type");
+                         xhrObj.setRequestHeader("Content-Type","application/json");
+                         xhrObj.setRequestHeader("Accept","application/json");
+                     },
 				  	headers:{
 				  		'Access-Control-Allow-Origin'   : 'http://localhost/',
 				    	"accept": "application/json",
