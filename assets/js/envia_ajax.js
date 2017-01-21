@@ -47,6 +47,8 @@
 		          		alert("Ocorreu algum erro.");
 		          	}
 		        });
+
+
 		        /*---*Envio do formulario---*/
 		        $("#nome").val('');
 				$("#email").val('');
@@ -61,37 +63,29 @@
 				$('.openModal').css("display", "none");
 				console.log('sdasadd22222')
 				
-			var methods; 
-			$.ajax({
-				type : "GET",
-				async: true,
-			  	
-			  	url: "http://www.casadascuecas.com.br/api/catalog_system/pub/products/search/?fq=P:[0%20TO%2010]",
-			  	method: "GET",
-			  	cache: false,
-			  	data : methods,
-			  	dataType: "jsonp",
-			  	'Access-Control-Allow-Origin'   : '*',
-			    "accept": "application/json",
-			    "content-type": "application/json",
-			    success:function(data){
-			    	var tdados = jQuery.parseJSON(data);
-			    	
-			    	$("#prateleira").html('asdsdsda')
-			    },
-			    error:function(result){console.log(result)}
-			  });
-		
-		/*	var urlJson = "http://www.casadascuecas.com.br/api/catalog_system/pub/products/search/?fq=P:[0%20TO%2010]";
-			$.getJSON(urlJson, function(data){
-				var i= [];
-				$.each(data, function(key, val){
-					i.push("<div>"+key+ val+ "</div>");
+				var methods; 
+				$.ajax({
+					xhrFields: {
+        			withCredentials: true
+    					},
+					type : "GET",
+					async: true,
+					crossDomain: true,
+				  	url: "http://www.casadascuecas.com.br/api/catalog_system/pub/products/search/?fq=P:[0%20TO%2010]",
+				  	data : "productId",
+				  	dataType: "jsonp",
+				  	headers:{
+				  		'Access-Control-Allow-Origin'   : 'http://localhost/',
+				    	"accept": "application/json",
+				    	"dataType": 'application/json'
+				  	},				  	
+				    success:function(data){
+				    	alert(data);
+				    	/*var tdados = jQuery.parseJSON(data);
+				    	
+				    	$("#prateleira").html('asdsdsda')*/
+				    },
+				    error:function(result){alert("nao deu certo" + result)}
 				});
-				$(i).appendTo("#prateleira");
-			})*/
-
-
-
 	}
 }(jQuery));
